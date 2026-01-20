@@ -1,1 +1,312 @@
-# My-resume
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajay Pandey | Resume</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --muted:#9fb0d0;
+      --text:#eaf0ff;
+      --accent:#4fd1c5;
+      --accent2:#7c5cff;
+      --chip:#132444;
+      --line:rgba(255,255,255,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(124,92,255,.35), transparent 60%),
+                  radial-gradient(900px 500px at 90% 20%, rgba(79,209,197,.28), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{
+      max-width:1050px;
+      margin:28px auto;
+      padding:0 16px 32px;
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:18px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      overflow:hidden;
+    }
+    .pad{padding:18px 18px}
+    .header{
+      padding:20px 18px;
+      background: linear-gradient(135deg, rgba(124,92,255,.35), rgba(79,209,197,.20));
+      border-bottom:1px solid var(--line);
+    }
+    .name{
+      font-size:28px;
+      font-weight:800;
+      letter-spacing:.2px;
+      margin:0 0 6px;
+    }
+    .role{
+      margin:0;
+      color:var(--muted);
+      font-weight:600;
+    }
+    .meta{
+      margin-top:12px;
+      display:grid;
+      gap:10px;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .meta div{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: rgba(15,26,46,.55);
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 0 0 4px rgba(79,209,197,.12);
+      flex:0 0 10px;
+    }
+    h2{
+      font-size:15px;
+      margin:0 0 10px;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      color:#dbe6ff;
+    }
+    h3{
+      margin:0 0 6px;
+      font-size:16px;
+    }
+    .section{margin-top:14px}
+    .muted{color:var(--muted)}
+    .hr{
+      height:1px;background:var(--line);
+      margin:14px 0;
+    }
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(19,36,68,.75);
+      border:1px solid var(--line);
+      color:#d7e4ff;
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .item{
+      padding:14px 14px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:rgba(15,26,46,.55);
+      margin:10px 0;
+    }
+    .item .top{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px 12px;
+      align-items:baseline;
+      justify-content:space-between;
+    }
+    .badge{
+      font-size:12px;
+      padding:5px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:#dbe6ff;
+      background:linear-gradient(135deg, rgba(124,92,255,.18), rgba(79,209,197,.12));
+    }
+    ul{margin:10px 0 0 18px; color:#dbe6ff}
+    li{margin:6px 0}
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    .small{font-size:13px}
+    .footer{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:10px;
+      text-align:center;
+    }
+    .actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(15,26,46,.55);
+      color:var(--text);
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn:hover{filter:brightness(1.08)}
+    @media (max-width: 900px){
+      .wrap{grid-template-columns:1fr}
+    }
+    @media print{
+      body{background:white;color:#111}
+      .card{box-shadow:none}
+      a{color:#111}
+      .btn,.actions{display:none}
+      .header{background:#f3f6ff}
+      .muted{color:#444}
+      .chip{color:#111}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <!-- LEFT COLUMN -->
+    <aside class="card">
+      <div class="header">
+        <h1 class="name">AJAY PANDEY</h1>
+        <p class="role">IT Support Executive / IT Support Engineer</p>
+
+        <div class="meta">
+          <div><span class="dot"></span><span>Email: <a href="mailto:iamajay441@gmail.com">iamajay441@gmail.com</a></span></div>
+          <div><span class="dot"></span><span>Phone: <a href="tel:+917309986223">+91-7309986223</a>, <a href="tel:+917271862008">+91-7271862008</a></span></div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="mailto:iamajay441@gmail.com">Email Me</a>
+          <a class="btn" href="#" onclick="window.print();return false;">Print / Save PDF</a>
+        </div>
+      </div>
+
+      <div class="pad">
+        <div class="section">
+          <h2>Objective</h2>
+          <p class="muted">
+            To work in an organisation where I can utilise my skills and enhance my knowledge, and work for the
+            organisation's vision and thus achieve self-development and prove myself as a valuable asset.
+          </p>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="section">
+          <h2>Computer Skills</h2>
+          <div class="chips">
+            <span class="chip">Hardware Troubleshooting</span>
+            <span class="chip">LAN / WAN</span>
+            <span class="chip">OS Installation & Configuration</span>
+            <span class="chip">Utility Software Support</span>
+            <span class="chip">IBM Lotus Mail Support</span>
+            <span class="chip">Outlook Support</span>
+            <span class="chip">RF Network</span>
+            <span class="chip">CCTV over Network</span>
+            <span class="chip">Remote Support</span>
+            <span class="chip">Asset & Inventory</span>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="section">
+          <h2>Other Skills</h2>
+          <div class="chips">
+            <span class="chip">Vendor Co-ordination</span>
+            <span class="chip">Team Player</span>
+            <span class="chip">Good Communication</span>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="section">
+          <h2>Personal Info</h2>
+          <div class="item small">
+            <div class="grid2">
+              <div><strong>Name:</strong> <span class="muted">Ajay Pandey</span></div>
+              <div><strong>DOB:</strong> <span class="muted">12 July 2002</span></div>
+              <div><strong>Place:</strong> <span class="muted">Uttar Pradesh</span></div>
+              <div><strong>Nationality:</strong> <span class="muted">Indian</span></div>
+              <div><strong>Languages:</strong> <span class="muted">Hindi, English</span></div>
+              <div><strong>Hobbies:</strong> <span class="muted">Bike riding, Photography</span></div>
+            </div>
+            <div style="margin-top:10px">
+              <strong>Address:</strong>
+              <span class="muted">Shahpur, Near Jaypee Green Wish Town, Sector–128, Noida, Uttar Pradesh - 201304</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <section class="card">
+      <div class="pad">
+        <div class="section">
+          <h2>Work Experience</h2>
+
+          <div class="item">
+            <div class="top">
+              <div>
+                <h3>Information Technology Support Executive</h3>
+                <div class="muted">Jaypee Infratech Limited</div>
+              </div>
+              <span class="badge">Mar 26, 2025 – Present</span>
+            </div>
+            <ul>
+              <li>Computer Hardware and Network (LAN, WAN) troubleshooting.</li>
+              <li>Operating System and utility software installation, troubleshooting and configuration.</li>
+              <li>Outlook Mail system configuration and troubleshooting.</li>
+              <li>Remote location support.</li>
+              <li>Asset and inventory management.</li>
+              <li>Vendor co-ordination.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="top">
+              <div>
+                <h3>Information Technology Support Engineer</h3>
+                <div class="muted">Jaiprakash Associates Ltd. (Payroll: Sai Kripa Faculty Management Services)</div>
+              </div>
+              <span class="badge">Dec 12, 2022 – Mar 25, 2025</span>
+            </div>
+            <ul>
+              <li>Computer Hardware and Network (LAN, WAN) troubleshooting.</li>
+              <li>Operating System and utility software installation, troubleshooting and configuration.</li>
+              <li>IBM Lotus Mail system configuration and troubleshooting.</li>
+              <li>RF Network configuration and troubleshooting.</li>
+              <li>CCTV camera configuration over the network.</li>
+              <li>Remote location support.</li>
+              <li>Asset and inventory management.</li>
+              <li>Vendor co-ordination.</li>
+              <li>Ensuring the accomplishment of the job on time.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="section">
+          <h2>Qualifications</h2>
+
+          <div class="item">
+            <div class="top">
+              <div>
+                <h3>Diploma in Computer Science Engineering</h3>
+                <div class="muted">Tathagat Gautam Buddha Govt. Polytechnic College, Srawasti, U.P.</div>
+                <div cl
